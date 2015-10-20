@@ -8,14 +8,21 @@ systems resilient to the effects of climate change by:
 * Helping design strategies to strengthen the resilience of PAs
 * Building capacity in the region for using the tools and implement the strategies
 
-# Sources
+# Installation
 
-The PARCC project feeds its data from two main sources: the Protected Planet
-API, and a set of CSV files containing various information on the targeted
-protected areas.
+PARCC is a pretty standard Rails application, backed by a Postgres database. To install PARCC, proceed with the usual commands:
+```
+    git clone https://github.com/unepwcmc/parcc.git parcc
+    cd parcc
+    bundle install
+    bundle exec rake db:create db:migrate
+
+    bundle exec rails server
+```
+
 
 # Importing
 
-When new versions of the CSV files are provided, the importing process can be started by calling the rake task `parcc:import`. This will read the CSV files in the `lib/data/parcc` subfolders, and import their content.
+When new versions of the CSV files are provided, the importing process can be started by calling the rake task `parcc:import`. This will read the CSV files in the `lib/data` subfolders, and import their content.
 
-Note that this task will initially fill the CSV file `lib/data/parcc/protected_areas.csv` with a subset of the information contained in one of the CSV files in the folder `lib/data/parcc/turnover` (doesn't matter which one). These information are then used to identify, and merge, with the information coming from the Protected Planet API.
+Note that this task will initially fill the CSV file `lib/data/protected_areas.csv` with a subset of the information contained in one of the CSV files in the folder `lib/data/turnover` (doesn't matter which one). These information are then used to identify, and merge, with the information coming from the Protected Planet API.

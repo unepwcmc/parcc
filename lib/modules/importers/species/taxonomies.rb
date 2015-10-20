@@ -37,7 +37,7 @@ class Importers::Species::Taxonomies < Importers::Base
   def species record, taxon_order
     species = species_props record
 
-    Species.create_with(
+    ::Species.create_with(
       species.merge(taxonomic_order: taxon_order)
     ).find_or_create_by(
       name: species[:name]

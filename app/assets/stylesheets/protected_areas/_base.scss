@@ -1,0 +1,69 @@
+@import '../colors';
+@import '../z-index';
+
+.main-container {
+  max-width: 1060px;
+  min-width: 890px;
+  margin: auto;
+}
+
+section {
+  margin-top: 35px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  color: $color--header-font;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: "MuseoSans-500";
+  color: $dark-grey;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-family: "MuseoSans-300";
+  color: $font-grey;
+}
+
+.subsubtitle {
+  color: $font-grey;
+}
+
+.line {
+  margin: 20px 0 25px 0;
+  border-bottom: solid 1px;
+  border-color: $color--line-border-bottom;
+  height: 0;
+  &.medium {
+    border-color: $color--line-border-bottom-medium;
+  }
+}
+
+.overlay {
+  z-index: $zIndex-10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.9;
+  background-color: white;
+
+  &.hidden { display: none; }
+
+  i {
+    color: $green;
+    font-size: 2.5em;
+  }
+}
+
+.fa-info-circle { color: $green }

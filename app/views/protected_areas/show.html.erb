@@ -1,0 +1,39 @@
+<section class="back-link">
+  <%= render "back_link" %>
+</section>
+
+<section>
+  <h1> Climate change vulnerability assessments </h1>
+  <div class="line"></div>
+
+  <%= render "protected_area_info" %>
+</section>
+
+<section class="tva-sdm">
+  <%= render "tva_percentage" %>
+  <%= render "sdm_percentage" %>
+</section>
+
+<section class="vulnerable-species">
+  <h2>Vulnerable species</h2>
+  <%= taxonomic_classes_tabs "vulnerability" %>
+  <div class="vulnerability-table-container">
+    <%= render "vulnerability_table" %>
+  </div>
+</section>
+
+<section class="suitability">
+  <h2>Expected changes in climate suitability</h2>
+  <%= taxonomic_classes_tabs "suitability" %>
+  <div class="suitability-table-container">
+    <%= render "suitability_table" %>
+  </div>
+</section>
+
+<section class="download">
+  <%= render "download_data" %>
+</section>
+
+<section class="back-link">
+  <%= render "back_link" %>
+</section>

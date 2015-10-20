@@ -1,0 +1,19 @@
+<table class="turnover-table">
+  <thead>
+    <th></th>
+    <th></th>
+    <th> by 2010-2039 </th>
+    <th> by 2040-2069 </th>
+  </thead>
+  <tbody>
+    <tr></tr>
+    <% Import.configuration["taxonomic_classes"].each do |taxonomic_class| %>
+      <tr>
+        <td><%= taxonomic_class %></td>
+        <td></td>
+        <td><%= render "turnover_cell", {turnover: @turnovers[taxonomic_class][2040]} %></td>
+        <td><%= render "turnover_cell", {turnover: @turnovers[taxonomic_class][2070]} %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

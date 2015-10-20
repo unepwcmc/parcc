@@ -12,5 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require dataTables/jquery.dataTables
+//= require dataTables/extras/dataTables.fixedColumns
 //= require turbolinks
-//= require_tree .
+//= require 'mapbox'
+//= require 'cartodb.core'
+//= require 'modules/parcc/protected_area_overlay'
+//= require 'modules/parcc/map'
+//= require 'modules/parcc/table'
+//= require 'modules/parcc/tabs_pane'
+//= require 'modules/parcc.js'

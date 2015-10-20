@@ -22,5 +22,12 @@ module Parcc
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.assets.precompile =  ['*.png', '*.js', '*.css', '*.css.erb', '*.eof', '*.ttf',
+      '*.svg', '*.swf', '*.woff', '*.woff2', '*gif', '*.eot', '*.pdf']
+    config.assets.precompile += %w(parcc.css)
+
+    config.autoload_paths += %W(#{config.root}/app/presenters #{config.root}/lib/modules)
+
   end
 end

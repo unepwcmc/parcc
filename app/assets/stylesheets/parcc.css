@@ -1,0 +1,20 @@
+/*
+*= require reset
+*= require mapbox
+*= require leaflet
+*= require leaflet_overrides
+*= require colors
+*= require transitions
+*= require z-index
+*= require base
+*= require_tree ./protected_areas
+*= require protected_areas
+*= require navigation
+*= require buttons
+*= require footer
+*= require font-awesome
+*= require dataTables/jquery.dataTables
+*= require dataTables/extras/dataTables.fixedColumns
+*= require datatables_overrides
+*= require jquery-ui
+*/

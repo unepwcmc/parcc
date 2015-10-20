@@ -12,12 +12,12 @@ systems resilient to the effects of climate change by:
 
 PARCC is a pretty standard Rails application, backed by a Postgres database. To install PARCC, proceed with the usual commands:
 ```
-    git clone https://github.com/unepwcmc/parcc.git parcc
-    cd parcc
-    bundle install
-    bundle exec rake db:create db:migrate
+git clone https://github.com/unepwcmc/parcc.git parcc
+cd parcc
+bundle install
+bundle exec rake db:create db:migrate
 
-    bundle exec rails server
+bundle exec rails server
 ```
 
 

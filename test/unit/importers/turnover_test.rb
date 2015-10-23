@@ -17,7 +17,7 @@ class TestImportersTurnover < ActiveSupport::TestCase
       country: 'NGO',
       polyID: '123',
       point: 'polygon',
-      WDPAID: '888999',
+      wdpaid: '888999',
       median: '0.222',
       upper: '0.333',
       lower: '0.111'

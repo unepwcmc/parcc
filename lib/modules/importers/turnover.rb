@@ -25,7 +25,7 @@ class Importers::Turnover < Importers::Base
 
   def create_record defaults, record
     stats = record.to_hash.slice(*STATS)
-    pa_id = {protected_area_id: pa_id_from_wdpa_id(record[:WDPAID])}
+    pa_id = {protected_area_id: pa_id_from_wdpa_id(record[:wdpaid])}
 
     SpeciesTurnover.create defaults.merge(stats).merge(pa_id)
   end

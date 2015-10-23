@@ -1,6 +1,9 @@
 PARCC - Protected Areas Resilient to Climate Change
 ===========================
 
+[![Code Climate](https://codeclimate.com/github/unepwcmc/parcc/badges/gpa.svg)](https://codeclimate.com/github/unepwcmc/parcc)
+[![Test Coverage](https://codeclimate.com/github/unepwcmc/parcc/badges/coverage.svg)](https://codeclimate.com/github/unepwcmc/parcc/coverage)
+
 The main objective of the project is to help countries design protected area
 systems resilient to the effects of climate change by:
 

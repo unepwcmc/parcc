@@ -46,3 +46,4 @@ group :development do
 #  gem 'brightbox', '~> 2.4.4'
 end
 
+gem 'dotenv-rails', :require => 'dotenv/rails-now'

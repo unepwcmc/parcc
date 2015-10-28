@@ -6,5 +6,11 @@
   <div class="percentage-bar">
     <div class="percentage" style="width: <%= @protected_area.percentage_vulnerable_species %>%"></div>
   </div>
-  <p class="subtitle"> <%= @protected_area.percentage_vulnerable_species %> % of species vulnerable to climate change </p>
+
+  <% percentage = @protected_area.percentage_vulnerable_species %>
+  <% if percentage == 0 %>
+    <p class="subtitle">None of the bird, amphibian, and mammal species assessed are considered vulnerable to climate change</p>
+  <% else %>
+    <p class="subtitle"><%= percentage %> % of bird, amphibian, and mammal species assessed are considered vulnerable to climate change</p>
+  <% end %>
 </div>

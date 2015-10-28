@@ -1,13 +1,15 @@
 module ProtectedAreasHelper
-  URL_TO_PROTECTED_AREA = -> wdpa_id { File.join(Rails.application.secrets.protected_planet_url, wdpa_id.to_s) }
+  PP_CONFIG = Rails.application.secrets.protected_planet
+
+  URL_TO_PROTECTED_AREA = -> wdpa_id { File.join(PP_CONFIG["root_url"], wdpa_id.to_s) }
   def protected_planet_path page
     {
-      root: Rails.application.secrets.protected_planet_url,
-      blog: Rails.application.secrets.protected_planet_url,
-      about: File.join(Rails.application.secrets.protected_planet_url, 'about'),
-      terms: File.join(Rails.application.secrets.protected_planet_url, 'terms'),
-      un_list: 'http://blog.protectedplanet.net/post/102481051829/2014-united-nations-list-of-protected-areas',
-      search: File.join(Rails.application.secrets.protected_planet_url, 'search?has_parcc_info=true&main=has_parcc_info'),
+      root: PP_CONFIG["root_url"],
+      blog: PP_CONFIG["blog_url"],
+      about: File.join(PP_CONFIG["root_url"], "about"),
+      terms: File.join(PP_CONFIG["root_url"], "terms"),
+      un_list: PP_CONFIG["un_list_url"],
+      search: File.join(PP_CONFIG["root_url"], PP_CONFIG["parcc_search_path"]),
       protected_area: URL_TO_PROTECTED_AREA
     }[page]
   end
@@ -25,7 +27,7 @@ module ProtectedAreasHelper
     ).html_safe if protected_area.high_priority
   end
 
-  LEGEND_PATH = Rails.root.join('config/parcc/vulnerability_legend.yml')
+  LEGEND_PATH = Rails.root.join("config/parcc/vulnerability_legend.yml")
   VULNERABILITY_LEGEND = YAML.load(File.read(LEGEND_PATH))
 
   def traits type, pa_species

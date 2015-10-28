@@ -38,10 +38,12 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-
-  gem 'rvm-capistrano'
-  gem 'capistrano', '~> 2.15.0', require: false
-  gem 'brightbox', '~> 2.4.4'
+  gem 'capistrano-rvm',   '~> 0.1', require: false
+  gem 'capistrano', '~> 3.4.0', require: false
+  gem 'capistrano-rails',   '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-passenger', '~> 0.1.1', require: false
+#  gem 'brightbox', '~> 2.4.4'
 end
 
-gem 'kaminari', '~> 0.16.3'
+gem 'dotenv-rails', :require => 'dotenv/rails-now'

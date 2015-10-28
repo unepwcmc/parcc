@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
+gem 'newrelic_rpm'

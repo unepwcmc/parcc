@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/', to: redirect(Rails.application.secrets.protected_planet_url)
+
   # Protected Areas
   get '/:id', to: 'protected_areas#show', as: 'protected_area'
   get '/download/:id', to: 'protected_areas#download', as: 'download'

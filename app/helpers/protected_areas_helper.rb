@@ -1,12 +1,13 @@
 module ProtectedAreasHelper
-  URL_TO_PROTECTED_AREA = -> wdpa_id { "http://www.protectedplanet.net/#{wdpa_id}" }
+  URL_TO_PROTECTED_AREA = -> wdpa_id { File.join(Rails.application.secrets.protected_planet_url, wdpa_id.to_s) }
   def protected_planet_path page
     {
-      root: 'http://www.protectedplanet.net',
-      blog: 'http://blog.protectedplanet.net',
-      about: 'http://www.protectedplanet.net/about',
-      terms: 'http://www.protectedplanet.net/terms',
+      root: Rails.application.secrets.protected_planet_url,
+      blog: Rails.application.secrets.protected_planet_url,
+      about: File.join(Rails.application.secrets.protected_planet_url, 'about'),
+      terms: File.join(Rails.application.secrets.protected_planet_url, 'terms'),
       un_list: 'http://blog.protectedplanet.net/post/102481051829/2014-united-nations-list-of-protected-areas',
+      search: File.join(Rails.application.secrets.protected_planet_url, 'search?has_parcc_info=true&main=has_parcc_info'),
       protected_area: URL_TO_PROTECTED_AREA
     }[page]
   end

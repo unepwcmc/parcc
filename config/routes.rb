@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/', to: redirect(Rails.application.secrets.protected_planet["root_url"])
+  get '/sites', to: 'protected_areas#index', as: 'protected_areas'
 
   # Protected Areas
   get '/:id', to: 'protected_areas#show', as: 'protected_area'

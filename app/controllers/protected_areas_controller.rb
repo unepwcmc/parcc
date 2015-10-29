@@ -2,7 +2,7 @@ class ProtectedAreasController < ApplicationController
   include ProtectedAreasHelper
   DEFAULT_TAXONOMIC_CLASS = Import.configuration["default_taxonomic_class"]
 
-  before_filter :load_protected_area, only: :show
+  before_filter :load_protected_area, except: :index
 
   def index
     redirect_to protected_planet_path(:search)

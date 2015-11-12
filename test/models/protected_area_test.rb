@@ -11,10 +11,8 @@ class ProtectedAreaTest < ActiveSupport::TestCase
 
   def setup
     @protected_area = FactoryGirl.create(:protected_area, {
-      parcc_id: 1,
       name: "Manbone",
       iso_3: "NB",
-      poly_id: 12,
       designation: "National Park",
       geom_type: "polygon",
       iucn_cat: "II",
@@ -27,10 +25,8 @@ class ProtectedAreaTest < ActiveSupport::TestCase
 
   test '::for_api, given no arguments, returns all protected_areas as JSON string' do
     FactoryGirl.create(:protected_area, {
-      parcc_id: 2,
       name: "San Guillermo",
       iso_3: "AR",
-      poly_id: 12,
       designation: "National Park",
       geom_type: "polygon",
       iucn_cat: "III",

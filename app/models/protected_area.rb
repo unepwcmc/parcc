@@ -1,15 +1,12 @@
 class ProtectedArea < ActiveRecord::Base
   COLUMNS_FOR_API = [
-    :parcc_id,    :name,
-    :iso_3,       :poly_id,
+    :name, :iso_3,
     :designation, :geom_type,
     :iucn_cat,    :wdpa_id,
     :count_total_species,
     :count_vulnerable_species,
     :percentage_vulnerable_species
   ]
-
-  validates :parcc_id, uniqueness: true
 
   has_many :species_protected_areas, foreign_key: :protected_area_id
   has_many :species, through: :species_protected_areas

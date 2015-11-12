@@ -1,8 +1,6 @@
 {
-  "parcc_id": 1,
   "name": "Manbone",
   "iso_3": "NB",
-  "poly_id": 12,
   "designation": "National Park",
   "geom_type": "polygon",
   "iucn_cat": "II",

@@ -1,8 +1,6 @@
 {
-  "parcc_id": 2,
   "name": "San Guillermo",
   "iso_3": "AR",
-  "poly_id": 12,
   "designation": "National Park",
   "geom_type": "polygon",
   "iucn_cat": "III",

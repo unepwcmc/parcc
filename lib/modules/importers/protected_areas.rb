@@ -3,11 +3,9 @@ class Importers::ProtectedAreas < Importers::Base
   FIRST_ISO_3 = -> (countries) { countries.first[:iso_3] }
 
   PA_PROPERTIES = {
+    wdpa_id:     :wdpaid,
     iso_3:       :country,
     name:        :name,
-    wdpa_id:     :wdpaid,
-    poly_id:     :polyid,
-    parcc_id:    :'',
     iucn_cat:    :iucn_cat,
     designation: :designation,
     geom_type:   :point
@@ -20,9 +18,7 @@ class Importers::ProtectedAreas < Importers::Base
 
   def import
     csv_reader(source_file_path).each do |record|
-      ProtectedArea.create(
-        collect_properties(record)
-      )
+      ProtectedArea.create(collect_properties(record))
     end
   end
 

@@ -40,6 +40,6 @@ module Downloads
   end
 
   def self.create_folder_if_needed
-    FileUtils.mkdir(BASE_PATH) unless File.exists?(BASE_PATH)
+    FileUtils.mkdir_p(BASE_PATH) unless File.exists?(BASE_PATH)
   end
 end

@@ -80,7 +80,7 @@
     </div>
   </footer>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, async: true %>
 
   <% if Rails.env.production? %>
     <%= render "shared/google_analytics" %>

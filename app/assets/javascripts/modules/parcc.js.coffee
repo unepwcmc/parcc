@@ -1,4 +1,3 @@
-
 window.Parcc = class Parcc
   constructor: ->
     @initializeMap($('#map'))

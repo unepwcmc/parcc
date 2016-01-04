@@ -7,10 +7,10 @@ $gutter: 0px;
 
 * {
   margin: 0;
-  font-family: MuseoSans-100;
 }
 
 html, body {
+  font-family: MuseoSans-100;
   height: 100%;
 }
 
@@ -26,19 +26,7 @@ html, body {
 
 a { text-decoration: none; }
 
-main {
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: fixed;
-  bottom: 75px;
-  left: 0px;
-  top: 60px;
-  width: 100%;
-  z-index: $zIndex-1;
-  line-height: 1.2em;
-}
-
-h1,h2,h3,h5,p,a {
+h1,h2,h3,h5,p {
   color: $color--base;
   font-weight: normal;
 }
@@ -74,24 +62,8 @@ select {
   float: right;
 }
 
-header {
-  background-color: $color--header-bg;
-  height: 60px;
-
-  li {
-    &.active { a { background-color: $color--header-active-link; } }
-    a { color: $color--header-link; }
-    a:hover { background-color: $color--header-hover-link; }
-  }
-}
-
 .flash {
   border: 1px solid $green;
   padding: 20px;
   margin-bottom: 30px;
-}
-
-.protected_areas-parent #map, .country-parent #map,
-.protected_areas-parent, .country-parent {
-  top: 120px;
 }

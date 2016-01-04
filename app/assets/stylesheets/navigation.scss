@@ -1,15 +1,6 @@
 @import 'z-index';
 @import 'colors';
 
-nav {
-  z-index: $zIndex-max;
-  overflow: hidden;
-  font-size: 0.938em;
-  width: 100%;
-  float: left;
-  list-style: none;
-}
-
 nav li {
   line-height: 59px;
   float: left;

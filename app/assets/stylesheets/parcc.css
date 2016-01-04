@@ -1,5 +1,5 @@
 /*
-*= require reset
+*= require 'protectedplanet-frontend/dist/style/main'
 *= require mapbox
 *= require leaflet
 *= require leaflet_overrides
@@ -12,6 +12,7 @@
 *= require navigation
 *= require buttons
 *= require footer
+*= require cms
 *= require font-awesome
 *= require dataTables/jquery.dataTables
 *= require dataTables/extras/dataTables.fixedColumns

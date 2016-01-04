@@ -8,6 +8,7 @@ module ProtectedAreasHelper
       blog: PP_CONFIG["blog_url"],
       about: File.join(PP_CONFIG["root_url"], "about"),
       terms: File.join(PP_CONFIG["root_url"], "terms"),
+      resources: File.join(PP_CONFIG["root_url"], "resources"),
       un_list: PP_CONFIG["un_list_url"],
       search: File.join(PP_CONFIG["root_url"], PP_CONFIG["parcc_search_path"]),
       protected_area: URL_TO_PROTECTED_AREA

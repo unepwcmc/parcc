@@ -22,4 +22,6 @@
 //= require 'modules/parcc/map'
 //= require 'modules/parcc/table'
 //= require 'modules/parcc/tabs_pane'
-//= require 'modules/parcc.js'
+//= require 'modules/parcc/vertical_nav'
+//= require 'modules/settings'
+//= require 'modules/parcc'

@@ -19,3 +19,5 @@
 .env
 .env.staging
 .env.production
+
+/vendor/assets/bower_components

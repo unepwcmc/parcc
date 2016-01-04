@@ -50,3 +50,4 @@ gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem 'newrelic_rpm'
 
 gem 'comfortable_mexican_sofa'
+gem 'tinymce-rails', '~> 4.3.2'

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get '/', to: redirect(Rails.application.secrets.protected_planet["root_url"])
+  get '/', to: redirect('/c')
   get '/sites', to: 'protected_areas#index', as: 'protected_areas'
-
 
   # API      👇
   namespace :api do
@@ -12,6 +11,8 @@ Rails.application.routes.draw do
 
   comfy_route :cms_admin, :path => '/admin'
 
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/c', :sitemap => false
 
   # Protected Areas
   get '/:id', to: 'protected_areas#show', as: 'protected_area'
@@ -20,7 +21,4 @@ Rails.application.routes.draw do
   # Tables Partials
   get '/:id/vulnerability_table', to: 'protected_areas#vulnerability_table', as: 'vulnerability_table'
   get '/:id/suitability_changes_table', to: 'protected_areas#suitability_changes_table', as: 'suitability_changes_table'
-  #
-  # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
 end

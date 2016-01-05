@@ -1,10 +1,11 @@
 window.VerticalNav = class VerticalNav
   constructor: ($containerEl) ->
-    debugger
+    classBase = 'vertical-nav__element'
+
     $containerEl.find('.js-toggle-section').click( (ev) ->
       $el = $(this)
 
-      $el.toggleClass('vertical-nav__element--opened vertical-nav__element--closed')
+      $el.toggleClass("#{classBase}--opened #{classBase}--closed")
       $el.next('div').toggleClass('u-hide')
 
       ev.preventDefault()

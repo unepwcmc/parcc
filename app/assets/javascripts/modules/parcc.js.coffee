@@ -3,6 +3,7 @@ window.Parcc = class Parcc
     @initializeMap($('#map'))
     @initializeTooltip()
     @initializeVerticalNav()
+    @initializeNavbar()
     @initializeVulnerabilityTable()
     @initializeSuitabilityTable()
 
@@ -11,6 +12,9 @@ window.Parcc = class Parcc
 
   initializeTooltip: ->
     $(".tooltip").tooltip()
+
+  initializeNavbar: ->
+    Navbar.initialize()
 
   initializeVerticalNav: ->
     $verticalNavEl = $('.vertical-nav')

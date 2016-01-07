@@ -19,6 +19,8 @@
 //= require 'mapbox'
 //= require 'cartodb.core'
 //= require 'modules/parcc/protected_area_overlay'
+//= require 'modules/parcc/dropdown'
+//= require 'modules/parcc/navbar'
 //= require 'modules/parcc/map'
 //= require 'modules/parcc/table'
 //= require 'modules/parcc/tabs_pane'

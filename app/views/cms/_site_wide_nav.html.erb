@@ -1,5 +1,5 @@
 <div class="vertical-nav">
-  <% Comfy::Cms::Page.root.children.each do |section| %>
+  <% @cms_site.pages.root.children.each do |section| %>
     <%= cms_section(section, @cms_page) %>
   <% end %>
 </div>

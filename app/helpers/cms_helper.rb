@@ -12,7 +12,7 @@ module CmsHelper
         }.join("\n").html_safe
       end
     else
-      cms_section_page(current_page, section)
+      cms_section_page(current_page, section, false)
     end
   end
 
@@ -28,10 +28,13 @@ module CmsHelper
     "#{bem('vertical-nav__element', *modifiers)} js-toggle-section"
   end
 
-  def cms_section_page current_page, page
+  def cms_section_page current_page, page, child=true
     el = 'vertical-nav__element'
-    modifiers = ['active'] if current_page == page
+    modifiers = [].tap { |m|
+      m << 'active' if current_page == page
+      m << 'child'  if child
+    }
 
-    link_to(page.label, "/c#{page.full_path}", class: bem(el, *modifiers))
+    link_to(page.label, File.join('/', page.site.path, page.full_path), class: bem(el, *modifiers))
   end
 end

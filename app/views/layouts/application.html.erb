@@ -14,11 +14,11 @@
 
       <% unless params[:for_pdf] %>
         <div class="navbar__element navbar__element--right"><%= link_to 'About',  protected_planet_path(:about) %></div>
-        <div class="navbar__element navbar__element--right"><%= link_to 'Updates & News', '#' %></div>
+        <!--<div class="navbar__element navbar__element--right"><%= link_to 'Updates & News', '#' %></div>
         <div class="navbar__element js-navbar-actionable navbar__element--right">
           <a href="<%= protected_planet_path(:resources) %>"> Resources
           </a>
-        </div>
+        </div>-->
         <div class="navbar__element navbar__element--right"><%= link_to 'Terms & Conditions', protected_planet_path(:terms) %></div>
         <div class="u-relative navbar__element js-navbar-actionable navbar__element--right">
           <button class="js-thematic-areas-dd-trigger">

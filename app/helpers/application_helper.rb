@@ -14,4 +14,12 @@ module ApplicationHelper
       protected_area: URL_TO_PROTECTED_AREA
     }[page]
   end
+
+  DEFAULT_LANGUAGE = "English"
+  LANGUAGES = {"en" => "English", "fr" => "French"}
+  def current_language
+    LANGUAGES[@cms_site.path] || DEFAULT_LANGUAGE
+  rescue
+    DEFAULT_LANGUAGE
+  end
 end

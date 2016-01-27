@@ -7,10 +7,9 @@ window.Navbar = class Navbar
     $('.js-navbar-actionable').click( (ev) ->
       $el = $(@)
       $el.toggleClass('navbar__element--dark')
+    ).each( (_i, el) =>
+      @addDropdown $(el)
     )
 
-    @thematicAreasDropdown = new Dropdown(
-      $('.js-thematic-areas-dd-trigger'),
-      $('.js-thematic-areas-dd-target')
-    )
-
+  addDropdown: ($el) ->
+    new Dropdown($el.find('.js-trigger'), $el.find('.js-target'))

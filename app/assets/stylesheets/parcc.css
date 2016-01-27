@@ -11,8 +11,8 @@
 *= require protected_areas
 *= require navigation
 *= require buttons
-*= require footer
 *= require cms
+*= require logos
 *= require font-awesome
 *= require dataTables/jquery.dataTables
 *= require dataTables/extras/dataTables.fixedColumns

@@ -28,6 +28,7 @@ module Parcc
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     config.assets.precompile += %w(parcc.css)
     config.assets.precompile += %w(protectedplanet-frontend/dist/*)
+    config.assets.precompile += %w(html5shiv/dist/*)
 
     config.tinymce.install = :compile
 

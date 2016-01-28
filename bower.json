@@ -9,7 +9,8 @@
     "dependencies": {
       "protectedplanet-frontend": "~> 4.2.0",
       "jquery": "< 2.0.0",
-      "html5shiv": ""
+      "html5shiv": "",
+      "REM-unit-polyfill": ""
     }
   }
 }

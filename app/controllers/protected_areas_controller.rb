@@ -1,5 +1,5 @@
 class ProtectedAreasController < ApplicationController
-  include ProtectedAreasHelper
+  include ApplicationHelper
   DEFAULT_TAXONOMIC_CLASS = Import.configuration["default_taxonomic_class"]
 
   before_filter :load_protected_area, except: :index

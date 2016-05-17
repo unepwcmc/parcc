@@ -1,6 +1,14 @@
 module CmsHelper
   include BemHelper
 
+  def report_url(cms_site)
+    if @cms_site.path == "fr"
+      "http://wcmc.io/parcc-report-fr"
+    else
+      "http://wcmc.io/parcc-report-en"
+    end
+  end
+
   def cms_section section, current_page
     children = section.children
 

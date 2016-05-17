@@ -1,6 +1,8 @@
 <a class="breadcrumbs__link" href="<%= protected_planet_path(:root) %>">Home</a>
 >
 <a class="breadcrumbs__link" href="/">Thematic Areas: PARCC West Africa</a>
->
-<%= @cms_page.parent.label %>: <%= @cms_page.label %>
+
+<% if @cms_page.parent %>
+> <%= @cms_page.parent.label %>: <%= @cms_page.label %>
+<% end %>
 

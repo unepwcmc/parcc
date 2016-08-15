@@ -16,7 +16,9 @@
 
   <div class="navbar">
     <div class="navbar__element navbar__element--bigger">
-      <%= link_to "protected planet", protected_planet_path(:root), class: 'protectedplanet-logo' %>
+      <%= link_to protected_planet_path(:root), class: 'protectedplanet-logo' do %>
+        protected planet<sup class="protectedplanet-logo__registered">®</sup>
+      <% end %>
     </div>
 
     <% unless params[:for_pdf] %>

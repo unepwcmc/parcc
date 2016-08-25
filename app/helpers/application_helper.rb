@@ -6,8 +6,11 @@ module ApplicationHelper
     {
       root: PP_CONFIG["root_url"],
       blog: PP_CONFIG["blog_url"],
-      about: File.join(PP_CONFIG["root_url"], "about"),
-      terms: File.join(PP_CONFIG["root_url"], "terms"),
+      about: File.join(PP_CONFIG["root_url"], "c/about"),
+      wdpa_page: File.join(PP_CONFIG["root_url"], "c/world-database-on-protected-areas"),
+      pame_page: File.join(PP_CONFIG["root_url"], "c/protected-areas-management-effectiveness-pame"),
+      connectivity_page: File.join(PP_CONFIG["root_url"], "c/connectivity-conservation"),
+      terms: File.join(PP_CONFIG["root_url"], "c/terms-and-conditions"),
       resources: File.join(PP_CONFIG["root_url"], "resources"),
       un_list: PP_CONFIG["un_list_url"],
       search: File.join(PP_CONFIG["root_url"], PP_CONFIG["parcc_search_path"]),

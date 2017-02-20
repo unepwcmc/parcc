@@ -1,0 +1,9 @@
+<% if @cms_site.path == "fr" %>
+  <button class="big-button big-button--alt-colors u-width-100" onclick="window.location.pathname='/fr/syntheses-politiques'">
+      <i class="fa fa-download big-button__icon"></i>Télécharger les synthèses politiques
+  </button>
+<% else %>
+  <button class="big-button big-button--alt-colors u-width-100" onclick="window.location.pathname='/en/policy-briefs'">
+      <i class="fa fa-download big-button__icon"></i>Download policy briefs
+  </button>
+<% end %>

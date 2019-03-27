@@ -1,16 +1,5 @@
 {
-  "lib": {
-    "name": "bower_rails_generated_lib_assets",
+    "name": "bower-rails generated vendor assets",
     "dependencies": {
     }
-  },
-  "vendor": {
-    "name": "bower_rails_generated_vendor_assets",
-    "dependencies": {
-      "protectedplanet-frontend": "4.3.3",
-      "jquery": "< 2.0.0",
-      "html5shiv": "",
-      "REM-unit-polyfill": ""
-    }
-  }
 }

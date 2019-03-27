@@ -1,9 +1,11 @@
 set :stage, :staging
+set :branch, "migration_deployment"
 
-server "web-staging.linode.unep-wcmc.org", user: 'wcmc', roles: %w{app web db}
+
+server "new-web.pp-staging.linode.protectedplanet.net", user: 'wcmc', roles: %w{app web db}
 
 set :application, "parcc"
-set :server_name, "parcc.web-staging.linode.unep-wcmc.org"
+set :server_name, "parcc.new-web.pp-staging.linode.protectedplanet.net"
 set :sudo_user, "wcmc"
 set :app_port, "80"
 

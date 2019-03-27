@@ -20,33 +20,79 @@ set :pty, true
 #set :bower_flags, '--quiet --config.interactive=false'
 #set :bower_roles, :web
 #set :bower_target_path, nil
-#set :bower_bin, :bower
+#set :bower_bin, "/home/wcmc/.nvm/versions/node/v10.15.1/bin/bower"
+
+
+
+
+#namespace :bower do
+#  desc 'Install bower packages'
+#  task :install do
+#    on roles(:web) do
+#      within release_path do
+#        execute :rake, 'bower:install CI=true'
+#      end
+#    end
+#  end
+#end
+
+#before 'deploy:compile_assets', 'bower:install'
+
+
+
 
 
 
 
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v10.15.1'
-set :nvm_map_bins, %w{node npm yarn bower}
+set :nvm_map_bins, %w{node npm yarn}
+
+
+namespace :bower do
+  desc 'Install dependencies with npm'
+  task :install do
+    on roles(:web) do
+      within release_path do
+        execute "bash -c 'source ~/.nvm/nvm.sh && cd '#{release_path}' && bower install'"
+      end
+    end
+  end
+end
 
 
 
 
-#namespace :npm do
-#  desc 'Install dependencies with npm'
-#  task :install do
-#    on roles(:web) do
-#      within release_path do
-#        execute "bash -c 'source ~/.nvm/nvm.sh && cd '#{release_path}' && npm install'"
-#      end
+
+
+
+
+
+#namespace :deploy do
+#  namespace :assets do
+#    desc 'install asset dependencies'
+#    task :install, roles: [:assets] do
+#      run "cd {release_path} && bower install --no-color"
 #    end
 #  end
 #end
 
+before 'deploy:assets:precompile', 'bower:install'
 
-#before 'deploy:starting', 'npm:install'
 
-#before 'deploy:compile_assets', 'npm:install'
+
+
+
+#namespace :deploy do
+#  namespace :assets do
+#    desc 'install asset dependencies'
+#    task :install, roles: [:assets] do
+ #     run "cd #{latest_release} && bower install --no-color"
+ #   end
+ # end
+#end
+
+
 
 
 

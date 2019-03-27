@@ -23,7 +23,7 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/passenger'
 require 'capistrano/bower'
-
+require 'capistrano/nvm'
 
 
 

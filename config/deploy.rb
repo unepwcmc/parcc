@@ -17,10 +17,10 @@ set :rvm_ruby_version, '2.2.3'
 set :pty, true
 
 
-set :bower_flags, '--quiet --config.interactive=false'
-set :bower_roles, :web
-set :bower_target_path, nil
-set :bower_bin, :bower
+#set :bower_flags, '--quiet --config.interactive=false'
+#set :bower_roles, :web
+#set :bower_target_path, nil
+#set :bower_bin, :bower
 
 
 
@@ -32,21 +32,21 @@ set :nvm_map_bins, %w{node npm yarn bower}
 
 
 
-namespace :npm do
-  desc 'Install dependencies with npm'
-  task :install do
-    on roles(:web) do
-      within release_path do
-        execute "bash -c 'source ~/.nvm/nvm.sh && cd '#{release_path}' && npm install'"
-      end
-    end
-  end
-end
+#namespace :npm do
+#  desc 'Install dependencies with npm'
+#  task :install do
+#    on roles(:web) do
+#      within release_path do
+#        execute "bash -c 'source ~/.nvm/nvm.sh && cd '#{release_path}' && npm install'"
+#      end
+#    end
+#  end
+#end
 
 
 #before 'deploy:starting', 'npm:install'
 
-before 'deploy:compile_assets', 'npm:install'
+#before 'deploy:compile_assets', 'npm:install'
 
 
 

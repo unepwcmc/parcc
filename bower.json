@@ -1,11 +1,11 @@
 {
   "lib": {
-    "name": "bower-rails generated lib assets",
+    "name": "bower_rails_generated_lib_assets",
     "dependencies": {
     }
   },
   "vendor": {
-    "name": "bower-rails generated vendor assets",
+    "name": "bower_rails_generated_vendor_assets",
     "dependencies": {
       "protectedplanet-frontend": "4.3.3",
       "jquery": "< 2.0.0",

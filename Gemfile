@@ -45,6 +45,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1', require: false
   gem 'capistrano-passenger', '~> 0.1.1', require: false
   gem 'capistrano-bower'
+  gem 'capistrano-nvm'
 end
 
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
